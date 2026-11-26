@@ -11,25 +11,25 @@ export default function NavigationBar() {
             <Nav variant="tabs">
                 <Nav.Item>
                     <Nav.Link as={NavLink} to="/" className="px-4">
-                        Home
+                        Accueil
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item>
                     <Nav.Link as={NavLink} to="/stats" className="px-4">
-                        Stats
+                        Statistiques
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item>
                     <Nav.Link as={NavLink} to="/edit" className="px-4">
-                        Edit
+                        Edition
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className="ms-auto">
                     <Button variant="outline-primary" className="px-4">
-                        Log in
+                        Connection
                     </Button>
                 </Nav.Item>
             </Nav>
