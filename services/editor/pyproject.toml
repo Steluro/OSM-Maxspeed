@@ -1,0 +1,14 @@
+[project]
+name = "maxspeed-editor"
+version = "0.1.0"
+description = "Editing API to speed up completion of maxspeed tags."
+readme = "README.md"
+authors = [
+    { name = "Aloïs VINCENT", email = "alois.vincent@imt-atlantique.net" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"

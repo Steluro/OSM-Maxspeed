@@ -1,0 +1,38 @@
+# Workspace root: holds shared tooling config and dev dependencies.
+# Each service is a member package under its own directory.
+
+[tool.uv.workspace]
+members = [
+    "stats",
+    "editor",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["*/src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "D", "ANN", "SIM", "RUF"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"*/tests/**" = ["ANN", "D100", "D104"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["*/tests"]
+addopts = ["--import-mode=importlib"]
